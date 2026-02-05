@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="First-year Computer Science Master's student at NYU Courant, currently learning about Algorithms, Reinforcement Learning, Rust and Arch Linux.">
+  <title>Hriday Ranka</title>
+  <link rel="canonical" href="https://cs.nyu.edu/~hsr3649/" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff; --fg:#000; --muted:#444;
+      --maxw:1040px;
+      --name-size: clamp(40px, 7.5vw, 84px);
+    }
+    html,body{
+      margin:0;padding:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:'Times New Roman', Times, serif;
+    }
+    a{color:inherit;text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    
+    .banner {
+      width: 100vw;
+      height: 200px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .banner-quote {
+      text-align: center;
+      font-style: italic;
+      font-family:'Times New Roman', Times, serif;
+      font-size: clamp(16px, 3vw, 24px);
+      color: #000;
+      margin: 24px auto 0 auto;
+      max-width: var(--maxw);
+      padding: 0 16px;
+    }
+    
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:48px 16px;}
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      margin-bottom:20px;
+      position:relative;
+    }
+    .left{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+    }
+    .name{
+      font-size:var(--name-size);
+      font-family: 'Merriweather', serif;
+      font-weight:600;
+      letter-spacing:-0.02em;
+      line-height:1;
+      white-space:nowrap;
+      margin:0;
+      padding:0;
+    }
+    .icons {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-top:8px;
+      color:rgba(0,0,0,0.45);
+      transform:translateY(-12px);
+    }
+
+    .icon {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(0,0,0,0.45);
+    }
+
+    .icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    .right{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:0;
+    }
+    .tag{
+      font-size:16px;
+      color:var(--muted);
+      white-space:nowrap;
+      margin:0;
+      padding:0;
+      line-height:1;
+      transform:translateY(-8px);
+    }
+
+    /* Desktop layout - side by side */
+    main{
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .left-section{
+      width: 220px;
+      justify-self: start;
+    }
+
+    .blurb{
+      width: 100%;
+      max-width: 400px;
+      text-align: justify;
+      margin-top: 0;
+      justify-self: end;
+    }
+
+    h2{
+      font-size: clamp(28px, 4vw, 40px);
+      margin:0 0 16px 0;
+      font-weight:600;
+      line-height: 0.9;
+    }
+    
+    .blurb p{
+      margin:0 0 12px;
+      font-size:18px;
+      line-height:1.6;
+      word-wrap: break-word;
+      text-align: justify;
+    }
+    
+    .blurb p:first-of-type{
+      margin-top: 0;
+    }
+    .chips{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      color:var(--muted);
+      font-size:18px;
+    }
+    .blurb p{
+      margin:0 0 12px;
+      font-size:18px;
+      line-height:1.6;
+      word-wrap: break-word;
+      text-align: justify;
+    }
+    .cv-link {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 500;
+      font-style: italic;
+      font-family:'Times New Roman', Times, serif;
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      vertical-align: baseline;
+      position: relative;
+      top: -2px;
+    }
+
+    .cv-link:hover {
+      text-decoration: underline;
+    }
+
+    .profile-image {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      margin-top: 16px;
+      display: block;
+      border-radius: 1px;
+      transform: scale(1.2);
+      transform-origin: top left;
+      margin-bottom: 80px;
+    }
+    
+    footer{
+      margin-top:54px;
+      border-top:1px solid #eee;
+      padding-top:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    
+    /* Tablet breakpoint */
+    @media (max-width:860px){
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .right {
+        align-items: flex-start;
+        margin-top: 0;
+      }
+      .banner {
+        height: 150px;
+      }
+      
+      main{
+        grid-template-columns: 1fr 350px;
+        gap: 40px;
+      }
+      
+      .left-section{
+        width: 180px;
+      }
+      
+      .blurb{
+        max-width: 350px;
+      }
+      
+      h2 {
+        white-space: normal;
+      }
+    }
+    
+    /* Mobile breakpoint - stack vertically */
+    @media (max-width:700px){
+      main{
+        display: block;
+      }
+      
+      .left-section{
+        width: 100%;
+        margin-bottom: 32px;
+      }
+      
+      .blurb{
+        width: 100%;
+        max-width: 100%;
+        justify-self: start;
+      }
+      
+      .banner {
+        height: 120px;
+      }
+      
+      .profile-image {
+        max-width: 180px;
+        transform: scale(1.1);
+        margin-bottom: 0;
+      }
+      
+      .chips {
+        font-size: 16px;
+      }
+      
+      .blurb p {
+        font-size: 16px;
+      }
+    }
+    
+    /* Small mobile */
+    @media (max-width:400px){
+      .name {
+        white-space: normal;
+      }
+      
+      .wrap {
+        padding: 32px 12px;
+      }
+      
+      .banner-quote {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <img src="banner.webp" alt="Banner">
+  </div>
+  <div class="banner-quote">
+    firm faith in hard work and consistent self improvement
+  </div>
+  <div class="wrap">
+    <header>
+      <div class="left">
+        <div class="name" style="margin-left: -5px;">Hriday Ranka</div>
+      </div>
+
+      <div class="right">
+        <nav class="icons" aria-label="social links">
+          <a class="icon" href="https://www.linkedin.com/in/hridayranka" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zM4.943 13.394V6.169H2.542v7.225zm-.6-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.823 0-1.342.554-1.342 1.248 0 .694.521 1.248 1.327 1.248zM9.251 13.394V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193V6.19h-2.4v7.204z"/>
+            </svg>
+          </a>
+          <a class="icon" href="https://github.com/FruitPnchSamuraiG" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 250" fill="currentColor">
+              <path d="M128 .3C57.3.3 0 57.6 0 128.3c0 56.7 36.7 104.8 87.7 121.8 6.4 1.2 8.7-2.8 8.7-6.3 0-3.1-.1-13.3-.2-24.1-35.7 7.8-43.2-15.1-43.2-15.1-5.8-14.8-14.2-18.7-14.2-18.7-11.6-7.9.9-7.7.9-7.7 12.8.9 19.5 13.2 19.5 13.2 11.4 19.5 30 13.9 37.3 10.6 1.1-8.3 4.4-13.9 8-17.1-28.5-3.2-58.4-14.2-58.4-63.2 0-14 5-25.5 13.2-34.5-1.3-3.2-5.7-16.1 1.2-33.6 0 0 10.7-3.4 35.1 13.2 10.2-2.8 21.1-4.3 31.9-4.4 10.8.1 21.7 1.5 31.9 4.4 24.3-16.6 35-13.2 35-13.2 6.9 17.5 2.5 30.4 1.2 33.6 8.2 9 13.2 20.5 13.2 34.5 0 49.1-29.9 60-58.4 63.1 4.5 3.9 8.5 11.7 8.5 23.6 0 17.1-.2 30.9-.2 35.1 0 3.5 2.3 7.6 8.7 6.3C219.3 233 256 184.9 256 128.3 256 57.6 198.7.3 128 .3z"/>
+            </svg>
+          </a>
+          <a class="icon" href="mailto:hriday.ranka@nyu.edu" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2 6c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm2 0 8 5 8-5H4zm16 12V8l-8 5-8-5v10h16z"/>
+            </svg>
+          </a>
+          <a class="icon" href="https://scholar.google.com/citations?user=R0JrsBEAAAAJ&hl" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+              <path d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm140.695 64h178.24l-16.47 12.86v22.693c6.116.785 5.469 4.46 5.469 8.857v107.223c0 4.965-4.062 9.03-9.028 9.03h-3.324c-4.966 0-9.03-4.065-9.03-9.03V140.41c0-4.408-.64-8.086 5.522-8.861v-14.266l-47.424 38.893c.548 1.016 1.068 1.667 1.563 2.52c4.167 7.377 6.289 16.548 6.289 27.76c0 8.592-1.432 16.314-4.336 23.13c-2.89 6.817-6.407 12.384-10.508 16.674c-4.101 4.304-8.215 8.236-12.33 11.777c-4.113 3.548-7.629 7.247-10.508 11.088c-2.901 3.828-4.347 7.787-4.347 11.889c0 4.108 1.876 8.28 5.613 12.486c3.724 4.219 8.305 8.306 13.723 12.344c5.429 4.01 10.846 8.463 16.263 13.306c5.43 4.836 9.987 11.061 13.711 18.621c3.75 7.586 5.625 15.938 5.625 25.118c0 12.109-3.087 23.046-9.246 32.779c-6.172 9.693-14.219 17.429-24.101 23.1c-9.91 5.709-20.508 10.006-31.809 12.91c-11.328 2.877-22.565 4.322-33.79 4.322a139.28 139.28 0 0 1-21.421-1.666c-7.212-1.12-14.438-3.098-21.717-5.885c-7.291-2.806-13.75-6.25-19.35-10.39c-5.611-4.095-10.13-9.382-13.593-15.82c-3.464-6.44-5.184-13.68-5.184-21.72c0-9.538 2.657-18.385 7.983-26.634c5.325-8.19 12.382-15.026 21.158-20.442c15.313-9.525 39.336-15.41 72.031-17.636c-7.473-9.343-11.223-18.14-11.223-26.37c0-4.682 1.222-9.7 3.645-15.117a86.788 86.788 0 0 1-12.031.854c-17.563 0-32.396-5.71-44.44-17.207c-12.044-11.479-18.058-25.846-18.058-43.217c0-1.816.052-3.419.181-5.19H81.064zm31.38 38.334c-11.2 0-19.793 4.029-25.782 12.07c-5.988 8.02-8.984 17.735-8.984 29.147c0 9.72 1.64 19.616 4.921 29.707c3.269 10.085 8.622 19.09 16.122 27.025c7.473 7.956 16.171 11.926 26.054 11.926c11.016 0 19.623-3.69 25.795-11.072c6.145-7.37 9.23-16.674 9.23-27.88c0-9.544-1.626-19.536-4.894-29.986c-3.256-10.462-8.685-19.902-16.264-28.306c-7.552-8.432-16.303-12.631-26.199-12.631m18.517 172.08c-8.035 0-15.94.712-23.7 2.13c-7.76 1.38-15.416 3.71-22.968 6.999c-7.579 3.27-13.698 8.075-18.36 14.43c-4.687 6.346-7.02 13.821-7.02 22.422c0 8.195 2.06 15.506 6.175 21.873c4.102 6.327 9.518 11.284 16.25 14.832c6.732 3.554 13.789 6.236 21.158 8c7.383 1.751 14.897 2.664 22.553 2.664c15.142 0 28.175-3.411 39.113-10.229c10.91-6.816 16.38-17.342 16.38-31.549c0-2.988-.416-5.932-1.237-8.802c-.86-2.904-1.704-5.39-2.538-7.454c-.833-2.025-2.421-4.467-4.765-7.279a368.29 368.29 0 0 0-5.315-6.289c-1.224-1.432-3.512-3.477-6.886-6.18c-3.345-2.713-5.48-4.405-6.432-5.03h-.002c-.938-.658-3.372-2.436-7.291-5.321c-3.919-2.911-6.066-4.454-6.445-4.637c-2.058-.37-4.946-.58-8.67-.58"/>
+            </svg>
+          </a>
+        </nav>
+        <div class="tag">CS Grad Student</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="left-section">
+       <h2>a brief introduction <a href="cv.pdf" target="_blank" class="cv-link">[CV]</a></h2>
+        <div class="chips" aria-label="links">
+          <span>nyu courant '27 → ??</span>
+          <span>bom · nyc → ??</span>
+        </div>
+        <img src="test4.jpg" alt="Profile" class="profile-image">
+      </section>
+
+      <section class="blurb">
+        <p>i am interested in all aspects of theoretical computer science, with an emphasis on Algorithms. </p>
+        <p>currently i'm trying my best to find a singular objective to devote all possible time to, the top candidates seem to be analysis of algorithms, <a href="reinforcement_learning.html" style="color: blue">reinforcement learning</a>, rust, and <s>ricing arch linux</s>.</p>
+        <p style="color:#000;"><strong>update</strong>: i have switched to <strong>omarchy</strong> after countless kernel crashes trying to bring back my arch system from suspend (<a href="omarchy.html" target="_blank" style="text-decoration:underline; color:inherit; cursor:pointer; color:blue">my current omarchy setup</a>)</p>
+        <p>before beginning my ms i was a research engineer, i worked on problems associated with bringing about trust and transparency on social media platforms.</p>
+        <p>right now im just trying to find where i belong.</p>
+        <div style="font-size:18px; color:var(--muted); font-style:italic; margin-top:0px;">
+          <a href="og.html" style="text-decoration:underline; color:var(--muted);">what this site used to be before</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
