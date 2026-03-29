@@ -372,7 +372,7 @@
             });
         }
         
-        // Add double-click event to center HRIDAY block in og.html to redirect to test.html.
+        // Add double-click event to center HRIDAY block in og.html to redirect to the main site.
         function addDoubleClickToCenterBlock() {
             const allCells = document.querySelectorAll('.cell.center-block');
 
@@ -386,7 +386,7 @@
 
                     if (tapLength < 400 && tapLength > 0) {
                         // Considered a double-tap
-                        window.location.href = 'index.html';
+                        window.location.href = 'https://cs.nyu.edu/~hsr3649/';
                     }
 
                     lastTap = currentTime;
