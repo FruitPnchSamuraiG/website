@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Hriday Ranka</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root{
+      --bg:#111; --fg:#fff; --muted:#bbb;
+      --maxw:1040px;
+      --name-size: clamp(40px, 7.5vw, 84px);
+    }
+    html,body{
+      margin:0;padding:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:'Times New Roman', Times, serif;
+    }
+    a{color:inherit;text-decoration:none;}
+    a:hover{text-decoration:underline;}
+
+    .banner {
+      width: 100vw;
+      aspect-ratio: 6.4 / 1; /* crop ratio stays fixed at any zoom/screen width */
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .banner-quote {
+      text-align: center;
+      font-style: italic;
+      font-family:'Times New Roman', Times, serif;
+      font-size: clamp(18px, 3vw, 26px);
+      color: var(--fg);
+      margin: 24px auto 0 auto;
+      max-width: var(--maxw);
+      padding: 0 16px;
+    }
+
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:54px 16px 48px;}
+
+    header{
+      margin-bottom:24px;
+    }
+    .name{
+      font-size:var(--name-size);
+      font-family:'Times New Roman', Times, serif;
+      font-weight:550;
+      letter-spacing:-0.02em;
+      line-height:1;
+      white-space:nowrap;
+      margin:0 0 14px -5px;
+      padding:0;
+    }
+
+    .about-content{
+      max-width: 680px;
+    }
+    .about-content p{
+      margin:0 0 16px;
+      font-size:17px;
+      line-height:1.6;
+      text-align: left;
+    }
+
+    .back-link{
+      display:inline-block;
+      margin-top:24px;
+      font-size:16px;
+      color:var(--muted);
+      text-decoration:none;
+    }
+    .back-link:hover{
+      color:var(--fg);
+    }
+
+    /* Mobile */
+    @media (max-width:700px){
+      .banner {
+        aspect-ratio: 4 / 1;
+      }
+
+      .about-content p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width:400px){
+      .name {
+        white-space: normal;
+      }
+
+      .wrap {
+        padding: 32px 12px;
+      }
+
+      .banner-quote {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <img src="banner.webp" alt="Banner">
+  </div>
+  <div class="banner-quote">
+    firm faith in hard work and consistent self improvement
+  </div>
+  <div class="wrap">
+    <header>
+      <div class="name">Hriday Ranka</div>
+    </header>
+
+    <main class="about-content">
+      <p>I'm a second-year master's student at Courant working on world models and ML systems, advised by Randall Balestriero and Jinyang Li respectively. I've also spent quite some time working on predicting differential emission measures for solar flares with Samuel Pérez-Díaz under the guidance of David Fouhey.</p>
+      <p>A lifetime ago, I graduated from Mumbai University, where I hold really fond memories of my time spent there. Most evenings back in India I spent either at Cuffe Parade or driving on the coastal road with two of my closest friends. I also spent countless hours running along the seaface in Worli, a habit I'm trying to keep alive these days along the Hudson River piers in New York.</p>
+      <p>Most of my time in New York has been spent at 60 Fifth Avenue. More than anything, it's where I've had the privilege of meeting an extraordinary group of people, many of whose academic journeys I deeply admire and hope to emulate in my own way.</p>
+      <p>Most of where I am today, however early that journey may still be, I owe to the people who've shaped the way I think over the past few years. I'm incredibly grateful to have met remarkable people across disciplines, geographies, and every stage of life and academia. There's something deeply contagious about watching people around you build obsessively and pursue ideas simply because they can. That joy of making things you genuinely care about, regardless of where they lead, is something I hope never to lose as I continue figuring out what I want to build.</p>
+
+      <a href="index.html" class="back-link">← back to home</a>
+    </main>
+  </div>
+</body>
+</html>
