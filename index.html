@@ -8,6 +8,36 @@
   <link rel="canonical" href="https://cs.nyu.edu/~hsr3649/" />
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
+    /* Tinos: metric-compatible with Times New Roman, self-hosted so every
+       device renders the same serif instead of falling back to its own */
+    @font-face{
+      font-family:'Tinos';
+      font-style:normal;
+      font-weight:400;
+      font-display:swap;
+      src:url('fonts/tinos-regular.woff2') format('woff2');
+    }
+    @font-face{
+      font-family:'Tinos';
+      font-style:normal;
+      font-weight:700;
+      font-display:swap;
+      src:url('fonts/tinos-bold.woff2') format('woff2');
+    }
+    @font-face{
+      font-family:'Tinos';
+      font-style:italic;
+      font-weight:400;
+      font-display:swap;
+      src:url('fonts/tinos-italic.woff2') format('woff2');
+    }
+    @font-face{
+      font-family:'Tinos';
+      font-style:italic;
+      font-weight:700;
+      font-display:swap;
+      src:url('fonts/tinos-bolditalic.woff2') format('woff2');
+    }
     :root{
       --bg:#111; --fg:#fff; --muted:#bbb;
       --maxw:1040px;
@@ -17,7 +47,7 @@
       margin:0;padding:0;
       background:var(--bg);
       color:var(--fg);
-      font-family:'Times New Roman', Times, serif;
+      font-family:'Tinos', 'Times New Roman', Times, serif;
     }
     a{color:inherit;text-decoration:none;}
     a:hover{text-decoration:underline;}
@@ -39,7 +69,7 @@
     .banner-quote {
       text-align: center;
       font-style: italic;
-      font-family:'Times New Roman', Times, serif;
+      font-family:'Tinos', 'Times New Roman', Times, serif;
       font-size: clamp(18px, 3vw, 26px);
       color: var(--fg);
       margin: 24px auto 0 auto;
@@ -57,7 +87,7 @@
     }
     .name{
       font-size:var(--name-size);
-      font-family:'Times New Roman', Times, serif;
+      font-family:'Tinos', 'Times New Roman', Times, serif;
       font-weight:550;
       letter-spacing:-0.02em;
       line-height:1;
@@ -78,6 +108,17 @@
       text-decoration:underline;
     }
     .header-links a:hover{
+      color:var(--fg);
+    }
+
+    /* About next to "a brief introduction" — mobile only */
+    .mobile-about{
+      display:none;
+      font-size:18px;
+      color:var(--muted);
+      text-decoration:underline;
+    }
+    .mobile-about:hover{
       color:var(--fg);
     }
 
@@ -171,26 +212,58 @@
         aspect-ratio: 4 / 1;
       }
 
+      .wrap{
+        padding: 32px 20px 40px;
+      }
+
+      /* About sits beside "a brief introduction" instead of in the header */
+      header{
+        display: block;
+        margin-bottom: 20px;
+      }
+      .name{
+        margin-bottom: 6px;
+      }
+      header .header-links{
+        display: none;
+      }
+      .intro-row{
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+      .mobile-about{
+        display: inline;
+      }
+
       main{
         display: block;
       }
 
       .left-section{
         width: 100%;
-        margin-bottom: 32px;
+        margin-bottom: 36px;
+      }
+
+      .side-photo{
+        width: 100%;
+        margin-top: 28px;
       }
 
       .blurb{
         width: 100%;
         max-width: 100%;
+        margin-top: 0;
       }
 
       h2 {
         white-space: normal;
+        margin-top: 0;
       }
 
       .blurb p {
-        font-size: 16px;
+        font-size: 17px;
+        text-align: left;
       }
     }
 
@@ -227,7 +300,10 @@
 
     <main>
       <section class="left-section">
-       <h2>a brief introduction</h2>
+       <div class="intro-row">
+         <h2>a brief introduction</h2>
+         <a href="about.html" class="mobile-about">About</a>
+       </div>
        <nav class="header-links" aria-label="contact links">
          <a href="mailto:hriday.ranka@nyu.edu">email</a> · <a href="https://github.com/FruitPnchSamuraiG" target="_blank" rel="noopener">github</a> · <a href="https://scholar.google.com/citations?user=R0JrsBEAAAAJ&hl" target="_blank" rel="noopener">scholar</a>
        </nav>
@@ -241,9 +317,6 @@
         <p>I'm interested in understanding what systems built around world models will look like in the coming years, and how they will touch our lives in unthinkable ways. Language was the first world these models learned to inhabit; I think and hope the ones that learn to imagine and act in <em>real</em> worlds will play a far more transformative role in our day to day lives than mere automation.</p>
         <p>My path here was a winding one. I began in theory, raised on <a href="algorithms.html" style="color: #6ea8ff">algorithms</a> and complexity, where computation is something you prove things about, and have slowly drifted toward models that hold little worlds inside them, learning to render, simulate, and act rather than merely describe.</p>
         <p>Right now I'm just trying to find where I belong.</p>
-        <div style="font-size:18px; color:var(--muted); margin-top:12px;">
-          <a href="og.html" style="text-decoration:underline; color:var(--muted);">What this site used to be before</a>
-        </div>
       </section>
     </main>
   </div>
