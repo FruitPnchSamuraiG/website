@@ -37,6 +37,15 @@
       font-display:swap;
       src:url('fonts/tinos-bolditalic.woff2') format('woff2');
     }
+    /* Noto Serif Devanagari 600: stroke weight matches Tinos Bold, so the
+       Devanagari ह sits evenly beside the Latin letters */
+    @font-face{
+      font-family:'Noto Serif Devanagari';
+      font-style:normal;
+      font-weight:600;
+      font-display:swap;
+      src:url('fonts/noto-serif-devanagari-600.woff2') format('woff2');
+    }
     :root{
       --bg:#111; --fg:#fff; --muted:#bbb;
       --maxw:1040px;
@@ -90,6 +99,13 @@
       white-space:nowrap;
       margin:0 0 14px -5px;
       padding:0;
+    }
+    /* Devanagari ह standing in for the H, sized to stand 6% above the R */
+    .name [lang="hi"]{
+      font-family:'Noto Serif Devanagari', serif;
+      font-weight:600;
+      font-size:1.09em;
+      letter-spacing:0;
     }
 
     .about-content{
@@ -148,7 +164,7 @@
   </div>
   <div class="wrap">
     <header>
-      <div class="name">Hriday Ranka</div>
+      <div class="name" role="img" aria-label="Hriday Ranka"><span lang="hi">ह</span>riday Ranka</div>
     </header>
 
     <main class="about-content">
